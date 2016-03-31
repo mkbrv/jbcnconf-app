@@ -1,0 +1,21 @@
+<ion-navbar *navbar>
+    <ion-title>Schedule</ion-title>
+</ion-navbar>
+
+<ion-content padding class="page1">
+    <ion-list>
+        <ion-item-group *ngFor="#group of groups">
+            <ion-item-divider sticky>
+                {{group.time}}
+            </ion-item-divider>
+
+            <ion-item *ngFor="#session of group.sessions">
+                <h3>{{session.name}}</h3>
+                <p>
+                    {{session.timeStart}} &mdash; {{session.timeEnd}}: {{session.location}}
+                </p>
+            </ion-item>
+
+        </ion-item-group>
+    </ion-list>
+</ion-content>
