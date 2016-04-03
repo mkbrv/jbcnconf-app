@@ -1,6 +1,72 @@
 {
-
   "schedule": [
+    {
+        "date":1466085396422,
+        "meetings":[
+           {
+            "timeStart":1466060400422,
+            "timeEnd":1466064000422,
+            "title":"Conference A1",
+            "about":"Mobile devices and browsers are now advanced enough that developers can build native-quality mobile apps using open web technologies like HTML5, Javascript, and CSS. In this talk, we’ll provide background on why and how we created Ionic, the design decisions made as we integrated Ionic with Angular, and the performance considerations for mobile platforms that our team had to overcome. We’ll also review new and upcoming Ionic features, and talk about the hidden powers and benefits of combining mobile app development and Angular.",
+            "location":"Aula A",
+            "track":"Track 1",
+            "speaker":"speaker1",
+            "type":"conference"
+        },{
+            "timeStart":1466064000422,
+            "timeEnd":1466067600226,
+            "title":"Conference A2",
+            "about":"Mobile devices and browsers are now advanced enough that developers can build native-quality mobile apps using open web technologies like HTML5, Javascript, and CSS. In this talk, we’ll provide background on why and how we created Ionic, the design decisions made as we integrated Ionic with Angular, and the performance considerations for mobile platforms that our team had to overcome. We’ll also review new and upcoming Ionic features, and talk about the hidden powers and benefits of combining mobile app development and Angular.",
+            "location":"Aula A",
+            "track":"Track 1",
+            "speaker":"speaker2",
+            "type":"conference"
+        },{
+            "timeStart":1466067600226,
+            "timeEnd":1466069400226,
+            "title":"Breakfast",
+            "about":"Meals and Meeting",
+            "location":"Patio interior",
+            "track":"all",
+            "speaker":"",
+            "type":"food"
+        }]
+    },
+    {
+        "date":1466085396423,
+        "meetings":[
+           {
+            "timeStart":1466060400422,
+            "timeEnd":1466064000422,
+            "title":"Conference A1",
+            "about":"Mobile devices and browsers are now advanced enough that developers can build native-quality mobile apps using open web technologies like HTML5, Javascript, and CSS. In this talk, we’ll provide background on why and how we created Ionic, the design decisions made as we integrated Ionic with Angular, and the performance considerations for mobile platforms that our team had to overcome. We’ll also review new and upcoming Ionic features, and talk about the hidden powers and benefits of combining mobile app development and Angular.",
+            "location":"Aula A",
+            "track":"Track 1",
+            "speaker":"speaker1",
+            "type":"conference"
+        },{
+            "timeStart":1466064000422,
+            "timeEnd":1466067600226,
+            "title":"Conference A2",
+            "about":"Mobile devices and browsers are now advanced enough that developers can build native-quality mobile apps using open web technologies like HTML5, Javascript, and CSS. In this talk, we’ll provide background on why and how we created Ionic, the design decisions made as we integrated Ionic with Angular, and the performance considerations for mobile platforms that our team had to overcome. We’ll also review new and upcoming Ionic features, and talk about the hidden powers and benefits of combining mobile app development and Angular.",
+            "location":"Aula A",
+            "track":"Track 1",
+            "speaker":"speaker2",
+            "type":"conference"
+        },{
+            "timeStart":1466067600226,
+            "timeEnd":1466069400226,
+            "title":"Breakfast",
+            "about":"Meals and Meeting",
+            "location":"Patio interior",
+            "track":"all",
+            "speaker":"",
+            "type":"food"
+        }]
+    }  
+  ],
+
+  "scheduler": [
     {
       "date": "2047-05-17",
       "groups": [
