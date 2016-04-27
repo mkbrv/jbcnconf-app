@@ -20,7 +20,21 @@ export class JbcnService {
         let data:any = {};
         this.json = JSON.stringify(json);
         localStorage.setItem("json", this.json);
-        data.schedule = json.schedule;
+        data.schedule = [];
+        
+        for(var i=0; i<json.schedule.length; i++) {
+            var day = json.schedule[i];
+            day.date = Date.parse(day.date);
+            for(var j=0; j<day.meetings.length; j++) {
+                console.debug(day.meetings[j].timeStart);
+                day.meetings[j].timeStart = Date.parse(day.meetings[j].timeStart);
+                day.meetings[j].timeEnd = Date.parse(day.meetings[j].timeEnd);
+            }
+            data.schedule.push(day);
+            console.debug(day);
+            
+        }
+        
         data.speakers = {};
         json.speakers.forEach((speaker) => {
             data.speakers[speaker.ref] = speaker;

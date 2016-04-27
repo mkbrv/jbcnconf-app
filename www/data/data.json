@@ -1,70 +1,454 @@
 {
   "schedule": [
     {
-        "date":1466085396422,
+        "date":"2017-06-16",
         "meetings":[
            {
-            "timeStart":1466060400422,
-            "timeEnd":1466064000422,
-            "title":"Conference A1",
-            "about":"Mobile devices and browsers are now advanced enough that developers can build native-quality mobile apps using open web technologies like HTML5, Javascript, and CSS. In this talk, we’ll provide background on why and how we created Ionic, the design decisions made as we integrated Ionic with Angular, and the performance considerations for mobile platforms that our team had to overcome. We’ll also review new and upcoming Ionic features, and talk about the hidden powers and benefits of combining mobile app development and Angular.",
-            "location":"Aula A",
-            "track":"Track 1",
-            "speaker":"speaker1",
-            "type":"conference"
-        },{
-            "timeStart":1466064000422,
-            "timeEnd":1466067600226,
-            "title":"Conference A2",
-            "about":"Mobile devices and browsers are now advanced enough that developers can build native-quality mobile apps using open web technologies like HTML5, Javascript, and CSS. In this talk, we’ll provide background on why and how we created Ionic, the design decisions made as we integrated Ionic with Angular, and the performance considerations for mobile platforms that our team had to overcome. We’ll also review new and upcoming Ionic features, and talk about the hidden powers and benefits of combining mobile app development and Angular.",
-            "location":"Aula A",
-            "track":"Track 1",
-            "speaker":"speaker2",
-            "type":"conference"
-        },{
-            "timeStart":1466067600226,
-            "timeEnd":1466069400226,
-            "title":"Breakfast",
-            "about":"Meals and Meeting",
-            "location":"Patio interior",
-            "track":"all",
-            "speaker":"",
-            "type":"food"
-        }]
-    },
-    {
-        "date":1466085396423,
+               "timeStart":"2016-06-16T08:15",
+               "timeEnd":"2016-06-16T09:00",
+               "title":"Registration",
+               "about":"Users registration",
+               "location":"Registation location",
+               "track":0,
+               "speaker":"none",
+               "type":"general"
+           },
+           {
+               "timeStart":"2016-06-16T09:00",
+               "timeEnd":"2016-06-16T09:20",
+               "title":"Welcome talk",
+               "about":"Welcome speak from organizers",
+               "location":"Big damn place",
+               "track":0,
+               "speaker":"alguien",
+               "type":"talk"
+           },
+           {
+               "timeStart":"2016-06-16T09:35",
+               "timeEnd":"2016-06-16T10:25",
+               "title":"Talk 1, Day 1, Track 1",
+               "about":"Talk 111",
+               "location":"Track 111 place",
+               "track":1,
+               "speaker":"speaker111",
+               "type":"talk"
+           },
+           {
+                "timeStart":"2016-06-16T09:35",
+               "timeEnd":"2016-06-16T10:25",
+               "title":"Talk 1, Day 1, Track 2",
+               "about":"Talk 112",
+               "location":"Track 112 place",
+               "track":2,
+               "speaker":"speaker112",
+               "type":"talk"
+           },{
+                "timeStart":"2016-06-16T09:35",
+               "timeEnd":"2016-06-16T10:25",
+               "title":"Talk 1, Day 1, Track 3",
+               "about":"Talk 113",
+               "location":"Track 113 place",
+               "track":3,
+               "speaker":"speaker113",
+               "type":"talk"
+           },{
+                "timeStart":"2016-06-16T09:35",
+               "timeEnd":"2016-06-16T10:25",
+               "title":"Talk 1, Day 1, Track 4",
+               "about":"Talk 114",
+               "location":"Track 114 place",
+               "track":4,
+               "speaker":"speaker114",
+               "type":"talk"
+           },
+           {
+               "timeStart":"2016-06-16T10:30",
+               "timeEnd":"2016-06-16T10:50",
+               "title":"Coffe Break",
+               "about":"Food, coffee and juice, dudes",
+               "location":"Food place",
+               "track":0,
+               "speaker":"",
+               "type":"food"
+           },{
+               "timeStart":"2016-06-16T11:00",
+               "timeEnd":"2016-06-16T11:50",
+               "title":"Talk 2, Day 1, Track 1",
+               "about":"Talk 211",
+               "location":"Track 211 place",
+               "track":1,
+               "speaker":"speaker211",
+               "type":"talk"
+           },{
+               "timeStart":"2016-06-16T11:00",
+               "timeEnd":"2016-06-16T11:50",
+               "title":"Talk 2, Day 1, Track 2",
+               "about":"Talk 212",
+               "location":"Track 212 place",
+               "track":2,
+               "speaker":"speaker212",
+               "type":"talk"
+           },{
+               "timeStart":"2016-06-16T11:00",
+               "timeEnd":"2016-06-16T11:50",
+               "title":"Talk 2, Day 1, Track 3",
+               "about":"Talk 213",
+               "location":"Track 213 place",
+               "track":3,
+               "speaker":"speaker213",
+               "type":"talk"
+           },{
+               "timeStart":"2016-06-16T11:00",
+               "timeEnd":"2016-06-16T11:50",
+               "title":"Talk 2, Day 1, Track 4",
+               "about":"Talk 214",
+               "location":"Track 214 place",
+               "track":4,
+               "speaker":"speaker214",
+               "type":"talk"
+           },{
+               "timeStart":"2016-06-16T12:05",
+               "timeEnd":"2016-06-16T12:55",
+               "title":"Talk 3, Day 1, Track 1",
+               "about":"Talk 311",
+               "location":"Track 311 place",
+               "track":1,
+               "speaker":"speaker311",
+               "type":"talk"
+           },{
+               "timeStart":"2016-06-16T12:05",
+               "timeEnd":"2016-06-16T12:55",
+               "title":"Talk 3, Day 1, Track 2",
+               "about":"Talk 312",
+               "location":"Track 312 place",
+               "track":2,
+               "speaker":"speaker312",
+               "type":"talk"
+           },{
+               "timeStart":"2016-06-16T12:05",
+               "timeEnd":"2016-06-16T12:55",
+               "title":"Talk 3, Day 1, Track 3",
+               "about":"Talk 313",
+               "location":"Track 313 place",
+               "track":3,
+               "speaker":"speaker313",
+               "type":"talk"
+           },{
+               "timeStart":"2016-06-16T12:05",
+               "timeEnd":"2016-06-16T12:55",
+               "title":"Talk 3, Day 1, Track 4",
+               "about":"Talk 314",
+               "location":"Track 314 place",
+               "track":4,
+               "speaker":"speaker314",
+               "type":"talk"
+           },{
+               "timeStart":"2016-06-16T13:00",
+               "timeEnd":"2016-06-16T14:20",
+               "title":"Lunch && Startup talk",
+               "about":"Food, coffee and juice, dudes",
+               "location":"Food place",
+               "track":0,
+               "speaker":"startup1",
+               "type":"food"
+           },{
+               "timeStart":"2016-06-16T14:30",
+               "timeEnd":"2016-06-16T15:20",
+               "title":"Talk 4, Day 1, Track 1",
+               "about":"Talk 411",
+               "location":"Track 411 place",
+               "track":1,
+               "speaker":"speaker411",
+               "type":"talk"
+           },{
+               "timeStart":"2016-06-16T14:30",
+               "timeEnd":"2016-06-16T15:20",
+               "title":"Talk 4, Day 1, Track 2",
+               "about":"Talk 412",
+               "location":"Track 412 place",
+               "track":2,
+               "speaker":"speaker412",
+               "type":"talk"
+           },{
+               "timeStart":"2016-06-16T14:30",
+               "timeEnd":"2016-06-16T15:20",
+               "title":"Talk 4, Day 1, Track 3",
+               "about":"Talk 413",
+               "location":"Track 413 place",
+               "track":3,
+               "speaker":"speaker413",
+               "type":"talk"
+           },{
+               "timeStart":"2016-06-16T14:30",
+               "timeEnd":"2016-06-16T15:20",
+               "title":"Talk 4, Day 1, Track 4",
+               "about":"Talk 414",
+               "location":"Track 414 place",
+               "track":4,
+               "speaker":"speaker414",
+               "type":"talk"
+           },{
+               "timeStart":"2016-06-16T15:35",
+               "timeEnd":"2016-06-16T16:25",
+               "title":"Talk 4, Day 1, Track 1",
+               "about":"Talk 411",
+               "location":"Track 411 place",
+               "track":1,
+               "speaker":"speaker411",
+               "type":"talk"
+           },{
+               "timeStart":"2016-06-16T15:35",
+               "timeEnd":"2016-06-16T16:25",
+               "title":"Talk 4, Day 1, Track 2",
+               "about":"Talk 412",
+               "location":"Track 412 place",
+               "track":2,
+               "speaker":"speaker412",
+               "type":"talk"
+           },{
+               "timeStart":"2016-06-16T15:35",
+               "timeEnd":"2016-06-16T16:25",
+               "title":"Talk 4, Day 1, Track 3",
+               "about":"Talk 413",
+               "location":"Track 413 place",
+               "track":3,
+               "speaker":"speaker413",
+               "type":"talk"
+           },{
+               "timeStart":"2016-06-16T15:35",
+               "timeEnd":"2016-06-16T16:25",
+               "title":"Talk 4, Day 1, Track 4",
+               "about":"Talk 414",
+               "location":"Track 414 place",
+               "track":4,
+               "speaker":"speaker414",
+               "type":"talk"
+           }]
+    },{
+        "date":"2017-06-17",
         "meetings":[
            {
-            "timeStart":1466060400422,
-            "timeEnd":1466064000422,
-            "title":"Conference A1",
-            "about":"Mobile devices and browsers are now advanced enough that developers can build native-quality mobile apps using open web technologies like HTML5, Javascript, and CSS. In this talk, we’ll provide background on why and how we created Ionic, the design decisions made as we integrated Ionic with Angular, and the performance considerations for mobile platforms that our team had to overcome. We’ll also review new and upcoming Ionic features, and talk about the hidden powers and benefits of combining mobile app development and Angular.",
-            "location":"Aula A",
-            "track":"Track 1",
-            "speaker":"speaker1",
-            "type":"conference"
-        },{
-            "timeStart":1466064000422,
-            "timeEnd":1466067600226,
-            "title":"Conference A2",
-            "about":"Mobile devices and browsers are now advanced enough that developers can build native-quality mobile apps using open web technologies like HTML5, Javascript, and CSS. In this talk, we’ll provide background on why and how we created Ionic, the design decisions made as we integrated Ionic with Angular, and the performance considerations for mobile platforms that our team had to overcome. We’ll also review new and upcoming Ionic features, and talk about the hidden powers and benefits of combining mobile app development and Angular.",
-            "location":"Aula A",
-            "track":"Track 1",
-            "speaker":"speaker2",
-            "type":"conference"
-        },{
-            "timeStart":1466067600226,
-            "timeEnd":1466069400226,
-            "title":"Breakfast",
-            "about":"Meals and Meeting",
-            "location":"Patio interior",
-            "track":"all",
-            "speaker":"",
-            "type":"food"
-        }]
-    }  
-  ],
+               "timeStart":"2016-06-17T08:15",
+               "timeEnd":"2016-06-17T09:00",
+               "title":"Registration",
+               "about":"Users registration",
+               "location":"Registation location",
+               "track":0,
+               "speaker":"none",
+               "type":"general"
+           },
+           {
+               "timeStart":"2016-06-17T09:00",
+               "timeEnd":"2016-06-17T09:20",
+               "title":"Welcome talk",
+               "about":"Welcome speak from organizers",
+               "location":"Big damn place",
+               "track":0,
+               "speaker":"alguien",
+               "type":"talk"
+           },
+           {
+               "timeStart":"2016-06-17T09:35",
+               "timeEnd":"2016-06-17T10:25",
+               "title":"Talk 1, Day 2, Track 1",
+               "about":"Talk 121",
+               "location":"Track  place",
+               "track":1,
+               "speaker":"speaker",
+               "type":"talk"
+           },
+           {
+                "timeStart":"2016-06-17T09:35",
+               "timeEnd":"2016-06-17T10:25",
+               "title":"Talk 1, Day 2, Track 2",
+               "about":"Talk 122",
+               "location":"Track 2 place",
+               "track":2,
+               "speaker":"speaker2",
+               "type":"talk"
+           },{
+                "timeStart":"2016-06-17T09:35",
+               "timeEnd":"2016-06-17T10:25",
+               "title":"Talk 1, Day 2, Track 3",
+               "about":"Talk 123",
+               "location":"Track 3 place",
+               "track":3,
+               "speaker":"speaker3",
+               "type":"talk"
+           },{
+                "timeStart":"2016-06-17T09:35",
+               "timeEnd":"2016-06-17T10:25",
+               "title":"Talk 1, Day 2, Track 4",
+               "about":"Talk 124",
+               "location":"Track 4 place",
+               "track":4,
+               "speaker":"speaker4",
+               "type":"talk"
+           },
+           {
+               "timeStart":"2016-06-17T10:30",
+               "timeEnd":"2016-06-17T10:50",
+               "title":"Coffe Break",
+               "about":"Food, coffee and juice, dudes",
+               "location":"Food place",
+               "track":0,
+               "speaker":"",
+               "type":"food"
+           },{
+               "timeStart":"2016-06-17T11:00",
+               "timeEnd":"2016-06-17T11:50",
+               "title":"Talk 2, Day 2, Track 1",
+               "about":"Talk 221",
+               "location":"Track  place",
+               "track":1,
+               "speaker":"speaker",
+               "type":"talk"
+           },{
+               "timeStart":"2016-06-17T11:00",
+               "timeEnd":"2016-06-17T11:50",
+               "title":"Talk 2, Day 2, Track 2",
+               "about":"Talk 222",
+               "location":"Track 2 place",
+               "track":2,
+               "speaker":"speaker2",
+               "type":"talk"
+           },{
+               "timeStart":"2016-06-17T11:00",
+               "timeEnd":"2016-06-17T11:50",
+               "title":"Talk 2, Day 2, Track 3",
+               "about":"Talk 223",
+               "location":"Track 3 place",
+               "track":3,
+               "speaker":"speaker3",
+               "type":"talk"
+           },{
+               "timeStart":"2016-06-17T11:00",
+               "timeEnd":"2016-06-17T11:50",
+               "title":"Talk 2, Day 2, Track 4",
+               "about":"Talk 224",
+               "location":"Track 4 place",
+               "track":4,
+               "speaker":"speaker4",
+               "type":"talk"
+           },{
+               "timeStart":"2016-06-17T12:05",
+               "timeEnd":"2016-06-17T12:55",
+               "title":"Talk 3, Day 2, Track 1",
+               "about":"Talk 321",
+               "location":"Track  place",
+               "track":1,
+               "speaker":"speaker",
+               "type":"talk"
+           },{
+               "timeStart":"2016-06-17T12:05",
+               "timeEnd":"2016-06-17T12:55",
+               "title":"Talk 3, Day 2, Track 2",
+               "about":"Talk 322",
+               "location":"Track 2 place",
+               "track":2,
+               "speaker":"speaker2",
+               "type":"talk"
+           },{
+               "timeStart":"2016-06-17T12:05",
+               "timeEnd":"2016-06-17T12:55",
+               "title":"Talk 3, Day 2, Track 3",
+               "about":"Talk 323",
+               "location":"Track 3 place",
+               "track":3,
+               "speaker":"speaker3",
+               "type":"talk"
+           },{
+               "timeStart":"2016-06-17T12:05",
+               "timeEnd":"2016-06-17T12:55",
+               "title":"Talk 3, Day 2, Track 4",
+               "about":"Talk 324",
+               "location":"Track 4 place",
+               "track":4,
+               "speaker":"speaker4",
+               "type":"talk"
+           },{
+               "timeStart":"2016-06-17T13:00",
+               "timeEnd":"2016-06-17T14:20",
+               "title":"Lunch && Startup talk",
+               "about":"Food, coffee and juice, dudes",
+               "location":"Food place",
+               "track":0,
+               "speaker":"startup1",
+               "type":"food"
+           },{
+               "timeStart":"2016-06-17T14:30",
+               "timeEnd":"2016-06-17T15:20",
+               "title":"Talk 4, Day 2, Track 1",
+               "about":"Talk 421",
+               "location":"Track  place",
+               "track":1,
+               "speaker":"speaker",
+               "type":"talk"
+           },{
+               "timeStart":"2016-06-17T14:30",
+               "timeEnd":"2016-06-17T15:20",
+               "title":"Talk 4, Day 2, Track 2",
+               "about":"Talk 422",
+               "location":"Track 2 place",
+               "track":2,
+               "speaker":"speaker2",
+               "type":"talk"
+           },{
+               "timeStart":"2016-06-17T14:30",
+               "timeEnd":"2016-06-17T15:20",
+               "title":"Talk 4, Day 2, Track 3",
+               "about":"Talk 423",
+               "location":"Track 3 place",
+               "track":3,
+               "speaker":"speaker3",
+               "type":"talk"
+           },{
+               "timeStart":"2016-06-17T14:30",
+               "timeEnd":"2016-06-17T15:20",
+               "title":"Talk 4, Day 2, Track 4",
+               "about":"Talk 424",
+               "location":"Track 4 place",
+               "track":4,
+               "speaker":"speaker4",
+               "type":"talk"
+           },{
+               "timeStart":"2016-06-17T15:35",
+               "timeEnd":"2016-06-17T16:25",
+               "title":"Talk 4, Day 2, Track 1",
+               "about":"Talk 421",
+               "location":"Track  place",
+               "track":1,
+               "speaker":"speaker",
+               "type":"talk"
+           },{
+               "timeStart":"2016-06-17T15:35",
+               "timeEnd":"2016-06-17T16:25",
+               "title":"Talk 4, Day 2, Track 2",
+               "about":"Talk 422",
+               "location":"Track 2 place",
+               "track":2,
+               "speaker":"speaker2",
+               "type":"talk"
+           },{
+               "timeStart":"2016-06-17T15:35",
+               "timeEnd":"2016-06-17T16:25",
+               "title":"Talk 4, Day 2, Track 3",
+               "about":"Talk 423",
+               "location":"Track 3 place",
+               "track":3,
+               "speaker":"speaker3",
+               "type":"talk"
+           },{
+               "timeStart":"2016-06-17T15:35",
+               "timeEnd":"2016-06-17T16:25",
+               "title":"Talk 4, Day 2, Track 4",
+               "about":"Talk 424",
+               "location":"Track 4 place",
+               "track":4,
+               "speaker":"speaker4",
+               "type":"talk"
+           }]
+    }],
   "speakers": [
       {
           "enabled":true,
@@ -84,120 +468,5 @@
           "biography":"When he's not arguing semantics, dancing at all the wrong times, or drawing randomly on the office whiteboards, you'll find him working on the Ionic Platform, planning new features, and not-so-silently cursing at his laptop. Otherwise he's probably feeding his gaming addiction with a glass of whiskey or a good Belgian beer.",
           "company":"Nopes"
       }
-  ],
-
-  "speakers_old": [
-    {
-      "name": "Eric Bobbitt",
-      "profilePic": "https://avatars3.githubusercontent.com/u/19638?v=3",
-      "twitter": "ericbobbitt",
-      "about": "When he's not arguing semantics, dancing at all the wrong times, or drawing randomly on the office whiteboards, you'll find him working on the Ionic Platform, planning new features, and not-so-silently cursing at his laptop. Otherwise he's probably feeding his gaming addiction with a glass of whiskey or a good Belgian beer.",
-      "location": "Madison, WI"
-    },
-    {
-      "name": "Adam Bradley",
-      "profilePic": "https://avatars2.githubusercontent.com/u/452425?v=3",
-      "twitter": "adamdbradley",
-      "about": "Co-creator of Ionic Framework and Angular Material Design team member. Regularly writes and speaks about hybrid development with Ionic and Angular. Proud dad, husband, veteran, and dog's best friend. Based in beautiful Madison, WI.",
-      "location": "Madison, WI"
-    },
-    {
-      "name": "Brandy Carney",
-      "profilePic": "https://avatars0.githubusercontent.com/u/6577830?v=3",
-      "twitter": "brandyscarney",
-      "about": "When she isn't busy keeping her two chihuahuas from killing each other, Brandy can be found making the Ionic SDK pretty by means of Sass. She loves helping people while continuing to expand her own knowledge. After hours she can be found on her patio shopping online with a glass of wine in hand. Give her a glass and she'll write some Sass.",
-      "location": "Jacksonville, FL"
-    },
-    {
-      "name": "Katie Ginder-Vogel",
-      "profilePic": "https://avatars2.githubusercontent.com/u/8117985?v=3",
-      "twitter": "katiegv",
-      "about": "Katie handles Ionic’s marketing, communications, and editorial, writing blog posts about unique Ionic apps and dreaming up new ways to bring Ionic to developers around the world. Outside the office, she can be found on land, running or hiking, or in the water, swimming and paddleboarding.",
-      "location": "Madison, WI"
-    },
-    {
-      "name": "Perry Govier",
-      "profilePic": "https://avatars1.githubusercontent.com/u/571056?v=3",
-      "twitter": "perrygovier",
-      "about": "Be it code, places, gadgets, food, or conversation, Perry loves to explore. While AFK he's probably biking around Madison, spending time with his wife and son, \"refactoring\" his house, or avoiding his overweight cat to whom he is very allergic and wishes was a dog.",
-      "location": "Madison, WI"
-    },
-    {
-      "name": "Mike Hartington",
-      "profilePic": "https://avatars0.githubusercontent.com/u/2835826?v=3",
-      "twitter": "mhartington",
-      "about": "Deep in the frozen North, just before the great wall, a man sits with a laptop, surrounded by serval cups of coffee and a glass of whiskey. Traveling across this great kingdom, he enlightens other devs and shares his knowledge through the written and spoken word. When the laptop is not near, he often finds solace in music with his guitar.",
-      "location": "Rhode Island"
-    },
-    {
-      "name": "Dan Imhoff",
-      "profilePic": "https://pbs.twimg.com/profile_images/627907755743952896/TEEur1pK.jpg",
-      "twitter": "dwieeb",
-      "about": "Dan \"the Sunshine Man\" builds awesome stuff for the Ionic Platform. When not shredding it in Vim, he can be found tearing over snow in his fat bike, attending the Madison tech meetups, ignorantly rating restaurants, taking a bunch of photographs at random cities and National Parks, or, possibly, still playing LEGOs.",
-      "location": "Madison, WI"
-    },
-    {
-      "name": "Brody Kidd",
-      "profilePic": "https://avatars0.githubusercontent.com/u/5280265?v=3",
-      "twitter": "brodymkidd",
-      "about": "If you can’t find him on call, shuffling through email, poking around on a new CRM, in our live chat support, or white boarding new business development… Odds are he is surfing lake Michigan, fly fishing the gin clear streams of the driftless region, camping in the north woods, or milking his goats.",
-      "location": "Madison, WI"
-    },
-    {
-      "name": "Tim Lancina",
-      "profilePic": "https://avatars2.githubusercontent.com/u/804331?v=3",
-      "twitter": "timlancina",
-      "about": "A temporarily embarrassed pro soccer player, Tim is fond of traveling the world and trying to convince his coworkers to eat bugs.  When not doing either of those, he is usually breaking things related to Ionic tooling, the platform, or the framework.",
-      "location": "Madison, WI"
-    },
-    {
-      "name": "Max Lynch",
-      "profilePic": "https://avatars3.githubusercontent.com/u/11214?v=3",
-      "twitter": "maxlynch",
-      "about": "Max loves using the power of software to make technology more accessible to people around the world. When not writing code or obsessing over a crazy new idea, he can be found watching the Premier League, riding Snowmobiles in a very safe manner, and hanging out with his wife Melissa and two Cavalier King Charles Spaniels.",
-      "location": "Madison, WI"
-    },
-    {
-      "name": "Rudy Pelrine",
-      "profilePic": "https://avatars0.githubusercontent.com/u/1584992?v=3",
-      "twitter": "Drawn_Closer",
-      "about": "A musician, DJ, sound engineer, photographer, and self proclaimed fashion nerd, Rudy seems to find a new obsession daily.  At Ionic, you'll find him working on the Platform services, making sure everyone's notifications arrive safe and sound.",
-      "location": "Madison, WI"
-    },
-    {
-      "name": "Drew Rygh",
-      "profilePic": "https://avatars2.githubusercontent.com/u/2018508?v=3",
-      "twitter": "ionicframework",
-      "about": "On most days, you will find Drew devising dazzling demos, drafting documentation, and consuming copious quantities of caffeine. He is obsessed with clarity, and making Ionic easy and fun to use. When not working, you might find him walking around the UW-Madison campus, where he is studying philosophy and computer science.",
-      "location": "Madison, WI"
-    },
-    {
-      "name": "Ben Sperry",
-      "profilePic": "https://avatars1.githubusercontent.com/u/519526?v=3",
-      "twitter": "benjsperry",
-      "about": "Ben is a user interface designer and front end tinkerer based in Madison, WI. He’s fascinated with making delightful human and machine interactions. He is also the co-founder of Ionic.",
-      "location": "Madison, WI"
-    }
-  ],
-
-
-  "map": [
-    {
-      "name": "Monona Terrace Convention Center",
-      "lat": 43.071584,
-      "lng": -89.380120,
-      "center": true
-    },
-    {
-      "name": "Ionic HQ",
-      "lat": 43.074395,
-      "lng": -89.381056
-    },
-    {
-      "name": "Afterparty - Brocach Irish Pub",
-      "lat": 43.07336,
-      "lng": -89.38335
-    }
   ]
-
-}
+  }
