@@ -1,0 +1,30 @@
+<ion-navbar *navbar>
+    <ion-title>
+        Speakers
+    </ion-title>
+</ion-navbar>
+
+<ion-content class="page2">
+    <ion-card *ngFor="#speaker of speakers" class="speaker">
+        <ion-card-header>
+            <ion-item (click)="goToSpeakerDetail(speaker)">
+                <ion-avatar item-left>
+                    <img [src]="speaker.image">
+                </ion-avatar>
+                {{speaker.name}}
+            </ion-item>
+        </ion-card-header>
+
+        <ion-item>
+            <button (click)="goToSpeakerTwitter(speaker)" clear item-left>
+                <ion-icon name="logo-twitter"></ion-icon>
+                Tweet
+            </button>
+            <button (click)="openSpeakerShare(speaker)" clear item-right>
+                <ion-icon name="share"></ion-icon>
+                Share
+            </button>
+        </ion-item>
+    </ion-card>
+
+</ion-content>
