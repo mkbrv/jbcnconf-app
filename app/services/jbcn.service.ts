@@ -2,6 +2,7 @@ import {Injectable, Inject} from 'angular2/core';
 import {Http} from 'angular2/http';
 
 var jbcnData;
+var favorites;
 
 @Injectable()
 export class JbcnService {
@@ -15,30 +16,94 @@ export class JbcnService {
     constructor(http: Http) {
         this.http = http;
     }
+    
+    getFavorites() {
+        if(favorites) {
+            return Promise.resolve(favorites);
+        } else {
+            return this.loadFavorites();
+        }
+    }
+    
+    addFavorite(meeting) {
+        favorites[meeting.id] = meeting;
+        this.saveFavorites();
+    }
+    
+    removeFavorite(meeting) {
+        delete favorites[meeting.id];
+        this.saveFavorites();
+    }
+    
+    isFavorite(id) {
+        return favorites.hasOwnProperty(id);
+    }
+    
+    saveFavorites() {
+        localStorage.setItem("favorites",JSON.stringify(favorites));
+    }
+    
+    loadFavorites() {
+        if(localStorage.getItem("favorites")) {
+            let favoritesStr = localStorage.getItem("favorites");
+            favorites = JSON.parse(favoritesStr);
+        } else {
+            favorites = {};
+            this.saveFavorites();
+        }
+        return favorites;
+    }
 
     processJson(json) {
-        let data:any = {};
-        this.json = JSON.stringify(json);
-        localStorage.setItem("json", this.json);
-        data.schedule = [];
+        let data:any = {}
+        data.speakers=[];
+        data.speakersRef={};
+        let meetingId = 100;
+        data.schedule=[];
+        let processed = {};
+        let day1 = {
+            "date": Date.parse("2017-06-16"),
+            "meetings":[]
+        };
         
-        for(var i=0; i<json.schedule.length; i++) {
-            var day = json.schedule[i];
-            day.date = Date.parse(day.date);
-            for(var j=0; j<day.meetings.length; j++) {
-                console.debug(day.meetings[j].timeStart);
-                day.meetings[j].timeStart = Date.parse(day.meetings[j].timeStart);
-                day.meetings[j].timeEnd = Date.parse(day.meetings[j].timeEnd);
+        for(var i=0; i<json.speakers.length; i++) {
+            let speaker = json.speakers[i];
+            let item = {};
+            item['name'] = speaker.name;
+            item['description']=speaker.description;
+            item['biography']=speaker.biography;
+            item['image']=speaker.image;
+            item['ref']=speaker.ref;
+            item['twitter']=speaker.twitter;
+            data.speakers[i] = item;
+            data.speakersRef[item['ref']] = item;
+            
+            
+            let talk = speaker.talk;
+            if(!processed[talk.title]) {
+                let meeting = {};
+                meeting['timeStart'] = Date.parse("2017-06-16 10:00");
+                meeting['timeEnd'] = Date.parse("2017-06-16 11:00");
+                meeting['title']=talk.title;
+                meeting['about']=talk.abstract;
+                meeting['location']='Location 1';
+                meeting['track']=(i%4)+1;
+                meeting['speakers']=[speaker.ref];
+                if(speaker.cospeakerref) {
+                    meeting['speakers'].push(speaker.cospeakerref);
+                }
+                meeting['tags']=talk.tags;
+                meeting['level']=talk.meeting;
+                meeting['type']='talk';
+                meeting['visible'] = true;
+                meeting['id']=meetingId;
+                processed[meeting['title']] = true;
+                meetingId++;
+                day1.meetings.push(meeting);    
             }
-            data.schedule.push(day);
-            console.debug(day);
             
         }
-        
-        data.speakers = {};
-        json.speakers.forEach((speaker) => {
-            data.speakers[speaker.ref] = speaker;
-        });
+        data.schedule.push(day1);
         return data;
     }
 
@@ -49,12 +114,7 @@ export class JbcnService {
 
         // don't have the data yet
         return new Promise(resolve => {
-            // We're using Angular Http provider to request the data,
-            // then on the response it'll map the JSON data to a parsed JS object.
-            // Next we process the data and resolve the promise with the new data.
-            this.http.get('data/data.json').subscribe(res => {
-                // we've got back the raw data, now generate the core schedule data
-                // and save the data for later reference
+            this.http.get('data/speakers.orig.json').subscribe(res => {
                 jbcnData = this.processJson(res.json());
                 resolve(jbcnData);
             });
