@@ -1,6 +1,27 @@
 
 .speaker-list {
 
+  .outer-content {
+    .button-default {
+      min-height: 3.6rem;
+      white-space: normal;
+    }
+    .button {
+      height: auto;
+    }
+  }
+
+  ion-avatar {
+    img {
+      max-width: 10rem;
+      max-height: 10rem;
+    }
+  }
+
+  ion-label {
+    white-space: normal;
+  }
+
   ion-card.speaker ion-card-header .item {
     padding: 12px;
   }
@@ -11,8 +32,8 @@
 
   ion-card.speaker ion-card-header,
   ion-card.speaker ion-card-content,
-  ion-card.speaker ion-card-content .list ion-item-content, {
+  ion-card.speaker ion-card-content .list ion-item-content {
     padding: 0;
   }
-  
+
 }

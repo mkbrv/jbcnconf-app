@@ -1,6 +1,5 @@
 import {Page, NavController, MenuController} from 'ionic-angular';
 import {TabsPage} from '../tabs/tabs';
-import {SignupPage} from '../signup/signup';
 
 
 @Page({

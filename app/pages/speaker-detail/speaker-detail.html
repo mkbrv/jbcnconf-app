@@ -1,4 +1,3 @@
-
 <ion-navbar *navbar>
   <ion-title>{{speaker.name}}</ion-title>
 </ion-navbar>
@@ -6,13 +5,15 @@
 <ion-content padding class="speaker-detail">
 
   <div text-center>
-    <img [src]="speaker.profilePic" [alt]="speaker.name"><br>
+    <img src="http://www.jbcnconf.com/2016/{{speaker.image}}" [alt]="speaker.name"><br>
 
-    <button clear small twitter><ion-icon name="logo-twitter"></ion-icon></button>
-    <button clear small github><ion-icon name="logo-github"></ion-icon></button>
-    <button clear small instagram><ion-icon name="logo-instagram"></ion-icon></button>
+    <p class="description">{{speaker.description}}</p>
+
+
   </div>
 
-  <p>{{speaker.about}}</p>
+  <hr>
+
+  <p class="biography">&nbsp;&nbsp;<span [innerHTML]="speaker.biography"></span></p>
 
 </ion-content>

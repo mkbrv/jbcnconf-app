@@ -1,6 +1,6 @@
 import {IonicApp, Page, Modal, Alert, NavController} from 'ionic-angular';
 import {ConferenceData} from '../../providers/conference-data';
-import {UserData} from '../../providers/user-data';
+import {User} from '../../providers/user';
 import {ScheduleFilterPage} from '../schedule-filter/schedule-filter';
 import {SessionDetailPage} from '../session-detail/session-detail';
 
@@ -10,7 +10,7 @@ import {SessionDetailPage} from '../session-detail/session-detail';
 })
 export class SchedulePage {
   static get parameters() {
-    return [[IonicApp], [NavController], [ConferenceData], [UserData]];
+    return [[IonicApp], [NavController], [ConferenceData], [User]];
   }
 
   constructor(app, nav, confData, user) {

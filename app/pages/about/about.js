@@ -1,11 +1,16 @@
 import {Page} from 'ionic-angular';
-
+import {Configuration} from '../../providers/configuration';
 
 @Page({
-  templateUrl: 'build/pages/about/about.html'
+    templateUrl: 'build/pages/about/about.html'
 })
 export class AboutPage {
-  constructor() {
-    this.conferenceDate = '16-18 June 2016';
-  }
+
+    static get parameters() {
+        return [[Configuration]];
+    }
+    
+    constructor(configuration) {
+        this.configuration = configuration.getConfiguration();
+    }
 }

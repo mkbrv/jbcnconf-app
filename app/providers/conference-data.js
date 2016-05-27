@@ -1,12 +1,12 @@
 import {Injectable} from '@angular/core';
 import {Http} from '@angular/http';
-import {UserData} from './user-data';
+import {User} from './user';
 
 
 @Injectable()
 export class ConferenceData {
   static get parameters(){
-    return [[Http], [UserData]];
+    return [[Http], [User]];
   }
 
   constructor(http, user) {

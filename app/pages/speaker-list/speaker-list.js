@@ -1,24 +1,41 @@
 import {NavController, Page, ActionSheet} from 'ionic-angular';
-import {ConferenceData} from '../../providers/conference-data';
 import {SpeakerDetailPage} from '../speaker-detail/speaker-detail';
 import {SessionDetailPage} from '../session-detail/session-detail';
-
+import {Speakers} from '../../providers/speakers'
+import {Configuration} from '../../providers/configuration'
 
 @Page({
   templateUrl: 'build/pages/speaker-list/speaker-list.html'
 })
 export class SpeakerListPage {
   static get parameters() {
-    return [[NavController], [ConferenceData]];
+    return [[NavController], [Speakers], [Configuration]];
   }
 
-  constructor(nav, confData) {
+  constructor(nav, speakersService, configuration) {
     this.nav = nav;
-    this.confData = confData;
-    this.speakers = [];
+    this.speakersService = speakersService;
+    this.configuration = configuration;
+    this.initialiseSpeakers();
+  }
 
-    confData.getSpeakers().then(speakers => {
-      this.speakers = speakers;
+  initialiseSpeakers() {
+    this.speakers = this.speakersService.list();
+  }
+
+  getSpeakers(searchbar) {
+    // Reset speakers back to all of the speakers
+    this.initialiseSpeakers();
+    // set q to the value of the searchbar
+    var q = searchbar.value;
+
+    // if the value is an empty string don't filter the speakers
+    if (q.trim() == '') {
+      return;
+    }
+
+    this.speakers = this.speakers.filter((v) => {
+      return v.name.toLowerCase().indexOf(q.toLowerCase()) > -1;
     });
   }
 
@@ -26,43 +43,12 @@ export class SpeakerListPage {
     this.nav.push(SessionDetailPage, session);
   }
 
-  goToSpeakerDetail(speakerName) {
-    this.nav.push(SpeakerDetailPage, speakerName);
+  goToSpeakerDetail(speaker) {
+    this.nav.push(SpeakerDetailPage, speaker);
   }
 
   goToSpeakerTwitter(speaker) {
-    window.open(`https://twitter.com/${speaker.twitter}`);
+    window.open(`${speaker.twitter}`);
   }
 
-  openSpeakerShare(speaker) {
-    let actionSheet = ActionSheet.create({
-      title: 'Share ' + speaker.name,
-      buttons: [
-        {
-          text: 'Copy Link',
-          handler: () => {
-            console.log("Copy link clicked on https://twitter.com/" + speaker.twitter);
-            if (window.cordova && window.cordova.plugins.clipboard) {
-              window.cordova.plugins.clipboard.copy("https://twitter.com/" + speaker.twitter);
-            }
-          }
-        },
-        {
-          text: 'Share via ...',
-          handler: () => {
-            console.log("Share via clicked");
-          }
-        },
-        {
-          text: 'Cancel',
-          role: 'cancel',
-          handler: () => {
-            console.log("Cancel clicked");
-          }
-        },
-      ]
-    });
-
-    this.nav.present(actionSheet);
-  }
 }

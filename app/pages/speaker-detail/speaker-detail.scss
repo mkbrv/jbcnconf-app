@@ -4,6 +4,17 @@
   border-radius: 50%;
 }
 
-.speaker-detail p {
-  color: #60646B;
+.speaker-detail {
+  p.description {
+    color: #60646B;
+    font-size: 1.5em;
+  }
+
+  p.biography {
+    font-size: 1.2em;
+    text-align: justify;
+    line-height: 1.3em;
+  }
 }
+
+

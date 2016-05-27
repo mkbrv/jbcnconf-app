@@ -5,37 +5,39 @@
   <ion-title>Speakers</ion-title>
 </ion-navbar>
 
+<ion-toolbar>
+  <ion-searchbar [(ngModel)]="searchQuery" (input)="getSpeakers($event)"></ion-searchbar>
+
+</ion-toolbar>
+
 <ion-content class="outer-content speaker-list">
+
   <ion-card *ngFor="let speaker of speakers" class="speaker">
 
     <ion-card-header>
       <ion-item>
         <ion-avatar item-left>
-          <img [src]="speaker.profilePic">
+          <img src="http://www.jbcnconf.com/2016/{{speaker.image}}">
         </ion-avatar>
-        {{speaker.name}}
+        {{speaker.name}}<br>
+        {{speaker.description}}
       </ion-item>
     </ion-card-header>
 
     <ion-card-content class="outer-content">
-      <ion-list>
-        <button ion-item *ngFor="let session of speaker.sessions" (click)="goToSessionDetail(session)">
-          <h3>{{session.name}}</h3>
-        </button>
-        <button ion-item (click)="goToSpeakerDetail(speaker)">
-          <h3>About {{speaker.name}}</h3>
-        </button>
-      </ion-list>
+      <button (click)="goToSessionDetail(speaker.talk)">
+        <h3>{{speaker.talk.title}}</h3>
+      </button>
     </ion-card-content>
 
     <ion-item>
-      <button (click)="goToSpeakerTwitter(speaker)" clear item-left>
+      <button *ngIf="speaker.twitter" (click)="goToSpeakerTwitter(speaker)" clear item-left>
         <ion-icon name="logo-twitter"></ion-icon>
         Tweet
       </button>
-      <button (click)="openSpeakerShare(speaker)" clear item-right>
-        <ion-icon name="share"></ion-icon>
-        Share
+      <button (click)="goToSpeakerDetail(speaker)" clear item-right>
+        <ion-icon name="person"></ion-icon>
+        About
       </button>
     </ion-item>
 
