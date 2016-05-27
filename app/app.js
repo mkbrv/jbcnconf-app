@@ -6,7 +6,7 @@ import {UserData} from './providers/user-data';
 import {TabsPage} from './pages/tabs/tabs';
 import {LoginPage} from './pages/login/login';
 import {SignupPage} from './pages/signup/signup';
-import {TutorialPage} from './pages/tutorial/tutorial';
+import {IntroPage} from './pages/intro/intro';
 
 
 @App({
@@ -25,6 +25,8 @@ import {TutorialPage} from './pages/tutorial/tutorial';
     nav: new ViewChild('content')
   }
 })
+
+
 class ConferenceApp {
   static get parameters() {
     return [
@@ -47,26 +49,26 @@ class ConferenceApp {
     confData.load();
 
     // We plan to add auth to only show the login page if not logged in
-    this.root = TutorialPage;
+    this.root = IntroPage;
 
     // create an list of pages that can be navigated to from the left menu
     // the left menu only works after login
     // the login page disables the left menu
     this.appPages = [
-      { title: 'Schedule', component: TabsPage, icon: 'calendar' },
-      { title: 'Speakers', component: TabsPage, index: 1, icon: 'contacts' },
-      { title: 'Map', component: TabsPage, index: 2, icon: 'map' },
-      { title: 'About', component: TabsPage, index: 3, icon: 'information-circle' },
+      {title: 'Schedule', component: TabsPage, icon: 'calendar'},
+      {title: 'Speakers', component: TabsPage, index: 1, icon: 'contacts'},
+      {title: 'Map', component: TabsPage, index: 2, icon: 'map'},
+      {title: 'About', component: TabsPage, index: 3, icon: 'information-circle'},
     ];
 
     this.loggedInPages = [
-      { title: 'Logout', component: TabsPage, icon: 'log-out' }
+      {title: 'Logout', component: TabsPage, icon: 'log-out'}
     ];
 
     this.loggedOutPages = [
-      { title: 'Login', component: LoginPage, icon: 'log-in' },
-      { title: 'Signup', component: SignupPage, icon: 'person-add' }
-    ]
+      {title: 'Login', component: LoginPage, icon: 'log-in'},
+      {title: 'Signup', component: SignupPage, icon: 'person-add'}
+    ];
 
     // decide which menu items should be hidden by current login status stored in local storage
     this.userData.hasLoggedIn().then((hasLoggedIn) => {

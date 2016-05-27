@@ -2,7 +2,7 @@
   background-color: #434954;
   padding: 16px;
   width: 100%;
-  min-height: 150px;
+  height: 120px;
   text-align: center;
 }
 
@@ -13,14 +13,20 @@
   padding: 25px 0 20px 0;
 }
 
-.about-info p {
-  color: #697072;
-  text-align: left;
-}
+.about-info {
+  p {
+    color: #697072;
+    text-align: left;
+  }
 
-.about-info ion-icon {
-  color: color($colors, primary);
-  width: 20px;
+  ion-icon {
+    color: color($colors, primary);
+    width: 20px;
+  }
+
+  ion-label {
+    white-space: normal;
+  }
 }
 
 .md,

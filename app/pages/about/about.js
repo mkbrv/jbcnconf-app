@@ -6,6 +6,6 @@ import {Page} from 'ionic-angular';
 })
 export class AboutPage {
   constructor() {
-    this.conferenceDate = '2047-05-17';
+    this.conferenceDate = '16-18 June 2016';
   }
 }
