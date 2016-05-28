@@ -25,10 +25,13 @@
     </ion-card-header>
 
     <ion-card-content class="outer-content">
-      <button (click)="goToSessionDetail(speaker.talk)">
-        <h3>{{speaker.talk.title}}</h3>
-      </button>
+      <span *ngFor="let talk of speaker.talks">
+        <button (click)="goToSessionDetail(talk)">
+          <h3>{{talk.title}}</h3>
+        </button>
+        </span>
     </ion-card-content>
+
 
     <ion-item>
       <button *ngIf="speaker.twitter" (click)="goToSpeakerTwitter(speaker)" clear item-left>

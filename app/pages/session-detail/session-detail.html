@@ -1,20 +1,14 @@
-
 <ion-navbar *navbar>
   <ion-title>Session</ion-title>
 </ion-navbar>
 
-<ion-content padding>
-  <h1>{{session.name}}</h1>
+<ion-content class="session-detail" padding>
+  <h1>{{talk.title}}</h1>
+  <h4> - {{talk.type}} - </h4>
+  <hr/>
+  <p>&nbsp;&nbsp;<span [innerHTML]="talk.abstract"></span></p>
 
-  <h4 *ngFor="let speaker of session.speakers">
-    {{speaker.name}}
-  </h4>
 
-  <p>
-    {{session.timeStart}} - {{session.timeEnd}}
-  </p>
+  <ion-badge *ngFor="let tag of talk.tags">{{tag}}</ion-badge>
 
-  <p>{{session.location}}</p>
-
-  <p>{{session.description}}</p>
 </ion-content>

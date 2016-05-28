@@ -11,6 +11,6 @@ export class SessionDetailPage {
 
   constructor(navParams) {
     this.navParams = navParams;
-    this.session = navParams.data;
+    this.talk = navParams.data;
   }
 }

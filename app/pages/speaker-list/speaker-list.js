@@ -1,7 +1,7 @@
 import {NavController, Page, ActionSheet} from 'ionic-angular';
 import {SpeakerDetailPage} from '../speaker-detail/speaker-detail';
 import {SessionDetailPage} from '../session-detail/session-detail';
-import {Speakers} from '../../providers/speakers'
+import {JBCNConf} from '../../providers/jbcnconf'
 import {Configuration} from '../../providers/configuration'
 
 @Page({
@@ -9,18 +9,18 @@ import {Configuration} from '../../providers/configuration'
 })
 export class SpeakerListPage {
   static get parameters() {
-    return [[NavController], [Speakers], [Configuration]];
+    return [[NavController], [JBCNConf], [Configuration]];
   }
 
-  constructor(nav, speakersService, configuration) {
+  constructor(nav, jbcnConf, configuration) {
     this.nav = nav;
-    this.speakersService = speakersService;
+    this.jbcnConf = jbcnConf;
     this.configuration = configuration;
     this.initialiseSpeakers();
   }
 
   initialiseSpeakers() {
-    this.speakers = this.speakersService.list();
+    this.speakers = this.jbcnConf.list();
   }
 
   getSpeakers(searchbar) {

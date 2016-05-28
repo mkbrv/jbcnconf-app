@@ -1,6 +1,6 @@
 import {Page, NavParams, ViewController} from 'ionic-angular';
 import {ConferenceData} from '../../providers/conference-data';
-import {Speakers} from '../../providers/speakers';
+import {JBCNConf} from '../../providers/jbcnconf';
 
 
 @Page({
