@@ -51,8 +51,13 @@ export class Conference {
 
   static get Tag() {
     return class Tag {
-      constructor(tag, talks) {
-        this.tag = tag;
+      /**
+       *
+       * @param name
+       * @param talks Talk[]
+       */
+      constructor(name, talks) {
+        this.name = name;
         this.talks = talks != undefined ? talks : [];
       }
 

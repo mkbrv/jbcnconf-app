@@ -8,41 +8,38 @@ import {JBCNConf} from '../../providers/jbcnconf';
 })
 export class ScheduleFilterPage {
   static get parameters() {
-    return [[ConferenceData], [NavParams], [ViewController]];
+    return [[NavParams], [ViewController], [JBCNConf]];
   }
 
-  constructor(confData, navParams, viewCtrl) {
-    this.confData = confData;
+  constructor(navParams, viewCtrl, jbcnConf) {
     this.navParams = navParams;
     this.viewCtrl = viewCtrl;
-    this.tracks = [];
+    this.jbcnConf = jbcnConf;
+    this.tags = [];
 
-    // passed in array of tracks that should be excluded (unchecked)
-    let excludeTracks = this.navParams.data;
+    // passed in array of tags that should be excluded (unchecked)
+    let excludedTags = this.navParams.data;
 
-    this.confData.getTracks().then(trackNames => {
-
-      trackNames.forEach(trackName => {
-        this.tracks.push({
-          name: trackName,
-          isChecked: (excludeTracks.indexOf(trackName) === -1)
-        });
+    this.jbcnConf.getTags().forEach(tag => {
+      this.tags.push({
+        name: tag.name + " ( " + tag.countTalks() + " ) ",
+        isChecked: (excludedTags.indexOf(tag.name) === -1)
       });
-
     });
+
   }
 
   resetFilters() {
     // reset all of the toggles to be checked
-    this.tracks.forEach(track => {
-      track.isChecked = true;
+    this.tags.forEach(tag => {
+      tag.isChecked = true;
     });
   }
 
   applyFilters() {
     // Pass back a new array of track names to exclude
-    let excludeTracks = this.tracks.filter(c => !c.isChecked).map(c => c.name);
-    this.dismiss(excludeTracks);
+    let excludeTags = this.tags.filter(c => !c.isChecked).map(c => c.name);
+    this.dismiss(excludeTags);
   }
 
   dismiss(data) {
