@@ -19,25 +19,32 @@ export class SpeakerListPage {
     this.initialiseSpeakers();
   }
 
-  initialiseSpeakers() {
+  initialiseSpeakers(callback) {
     this.speakers = [];
-    this.jbcnConf.getSpeakers(data => this.speakers = data)
+    if (callback) {
+      this.jbcnConf.getSpeakers(callback)
+    } else {
+      this.jbcnConf.getSpeakers(data => this.speakers = data)
+    }
   }
 
   getSpeakers(searchbar) {
-    // Reset speakers back to all of the speakers
-    this.initialiseSpeakers();
     // set q to the value of the searchbar
     var q = searchbar.value;
-
     // if the value is an empty string don't filter the speakers
     if (q.trim() == '') {
+      this.initialiseSpeakers();
       return;
     }
 
-    this.speakers = this.speakers.filter((v) => {
-      return v.name.toLowerCase().indexOf(q.toLowerCase()) > -1;
+    // Reset speakers back to all of the speakers
+    var self = this;
+    this.initialiseSpeakers(function (data) {
+      self.speakers = data.filter((v) => {
+        return v.name.toLowerCase().indexOf(q.toLowerCase()) > -1;
+      });
     });
+
   }
 
   goToSessionDetail(session) {

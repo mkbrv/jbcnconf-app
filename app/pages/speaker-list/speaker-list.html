@@ -12,37 +12,44 @@
 
 <ion-content class="outer-content speaker-list">
 
-  <ion-card *ngFor="let speaker of speakers" class="speaker">
+  <ion-list>
 
-    <ion-card-header>
-      <ion-item>
-        <ion-avatar item-left>
-          <img src="http://www.jbcnconf.com/2016/{{speaker.image}}">
-        </ion-avatar>
-        {{speaker.name}}<br>
-        {{speaker.description}}
-      </ion-item>
-    </ion-card-header>
+    <ion-item *ngFor="let speaker of speakers">
 
-    <ion-card-content class="outer-content">
+      <ion-card>
+
+        <ion-card-header class="speaker">
+          <ion-item>
+            <ion-avatar item-left>
+              <img src="http://www.jbcnconf.com/2016/{{speaker.image}}">
+            </ion-avatar>
+            {{speaker.name}}<br>
+            {{speaker.description}}
+          </ion-item>
+        </ion-card-header>
+
+        <ion-card-content class="outer-content">
       <span *ngFor="let talk of speaker.talks">
         <button (click)="goToSessionDetail(talk)">
           <h3>{{talk.title}}</h3>
         </button>
         </span>
-    </ion-card-content>
+        </ion-card-content>
 
 
-    <ion-item>
-      <button *ngIf="speaker.twitter" (click)="goToSpeakerTwitter(speaker)" clear item-left>
-        <ion-icon name="logo-twitter"></ion-icon>
-        Tweet
-      </button>
-      <button (click)="goToSpeakerDetail(speaker)" clear item-right>
-        <ion-icon name="person"></ion-icon>
-        About
-      </button>
+        <ion-item>
+          <button *ngIf="speaker.twitter" (click)="goToSpeakerTwitter(speaker)" clear item-left>
+            <ion-icon name="logo-twitter"></ion-icon>
+            Tweet
+          </button>
+          <button (click)="goToSpeakerDetail(speaker)" clear item-right>
+            <ion-icon name="person"></ion-icon>
+            About
+          </button>
+        </ion-item>
+
+      </ion-card>
     </ion-item>
 
-  </ion-card>
+  </ion-list>
 </ion-content>

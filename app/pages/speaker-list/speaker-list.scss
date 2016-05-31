@@ -16,29 +16,37 @@
     }
   }
 
-  ion-avatar {
-    img {
-      max-width: 10rem;
-      max-height: 10rem;
+  ion-item {
+    padding-left: 0;
+
+    .item-inner {
+      padding-right: 0;
     }
-  }
 
-  ion-label {
-    white-space: normal;
-  }
+    ion-avatar {
+      img {
+        max-width: 10rem;
+        max-height: 10rem;
+      }
+    }
 
-  ion-card.speaker ion-card-header .item {
-    padding: 12px;
-  }
+    ion-label {
+      white-space: normal;
+    }
 
-  ion-card.speaker ion-card-content .list {
-    margin: 0;
-  }
+    ion-card.speaker ion-card-header .item {
+      padding: 12px;
+    }
 
-  ion-card.speaker ion-card-header,
-  ion-card.speaker ion-card-content,
-  ion-card.speaker ion-card-content .list ion-item-content {
-    padding: 0;
+    ion-card.speaker ion-card-content .list {
+      margin: 0;
+    }
+
+    ion-card.speaker ion-card-header,
+    ion-card.speaker ion-card-content,
+    ion-card.speaker ion-card-content .list ion-item-content {
+      padding: 0;
+    }
   }
 
 }
