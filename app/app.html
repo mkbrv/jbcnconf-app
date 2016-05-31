@@ -18,12 +18,19 @@
 
         <ion-list>
             <ion-list-header>
-                Account
+                App
             </ion-list-header>
             <button ion-item menuClose *ngFor="let p of accountPages" (click)="openPage(p)">
                 <ion-icon item-left [name]="p.icon"></ion-icon>
                 {{p.title}}
             </button>
+
+          <button ion-item menuClose (click)="refresh()">
+            <ion-icon item-left name="refresh"></ion-icon>
+            Refresh
+          </button>
+
+
         </ion-list>
 
     </ion-content>

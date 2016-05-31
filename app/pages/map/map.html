@@ -5,6 +5,19 @@
   <ion-title>Map</ion-title>
 </ion-navbar>
 
-<ion-content class="map-page">
+<ion-content *ngIf="!hasInternetConnection()" class="card-background-page">
+
+  <ion-card>
+    <img src="img/offlinemap.png"/>
+    <div class="card-title"> - offline map -</div>
+    <div class="card-subtitle"><a target="_blank"
+                                  href="https://www.google.es/maps/dir//Carrer+de+Ramon+Trias+Fargas,+25,+08005+Barcelona/@41.3895849,2.1914035,19z/data=!4m16!1m7!3m6!1s0x12a4a304d9665cd7:0xb29da51e07572e77!2sCarrer+de+Ramon+Trias+Fargas,+25,+08005+Barcelona!3b1!8m2!3d41.3895849!4d2.1914035!4m7!1m0!1m5!1m1!1s0x12a4a304d9665cd7:0xb29da51e07572e77!2m2!1d2.1914035!2d41.3895849?hl=en">Directions </a>
+    </div>
+  </ion-card>
+
+
+</ion-content>
+
+<ion-content *ngIf="hasInternetConnection()" class="map-page">
   <div id="map"></div>
 </ion-content>

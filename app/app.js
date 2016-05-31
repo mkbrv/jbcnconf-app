@@ -11,13 +11,7 @@ import {IntroPage} from './pages/intro/intro';
 @App({
   templateUrl: 'build/app.html',
   providers: [Configuration, User, JBCNConf, ConferenceData],
-  // Set any config for your app here, see the docs for
-  // more ways to configure your app:
-  // http://ionicframework.com/docs/v2/api/config/Config/
   config: {
-    // Place the tabs on the bottom for all platforms
-    // See the theming docs for the default values:
-    // http://ionicframework.com/docs/v2/theming/platform-specific-styles/
     tabbarPlacement: "bottom"
   },
   queries: {
@@ -83,6 +77,10 @@ class ConferenceApp {
     } else {
       this.nav.setRoot(page.component);
     }
+  }
+
+  refresh() {
+    this.jbcnConf.refreshSpeakers();
   }
 
 }

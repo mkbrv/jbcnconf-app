@@ -20,7 +20,8 @@ export class SpeakerListPage {
   }
 
   initialiseSpeakers() {
-    this.speakers = this.jbcnConf.list();
+    this.speakers = [];
+    this.jbcnConf.getSpeakers(data => this.speakers = data)
   }
 
   getSpeakers(searchbar) {
